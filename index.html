@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .grid4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        .box-dieutri {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding: unset!important;
+        }
+        .des-dieutri {
+            padding: 0 10px;
+        }
+        .section-title {
+            color: #416aa9;
+            margin: 10px 0 25px 0;
+        }
+        .product-slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-thumbnails img {
+            width: 80px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+        }
+        .product-thumbnails img.active {
+            border-color: #007bff;
+        }
+        .certificate-slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .main {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .btn-buy {
+            display: inline-block;
+            background: #426aa8;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            border: none;
+        }
+        .advantage p {
+            font-size: 14px;
+            text-align: justify;
+        }
+        .advantage p i {
+            color: #416aa9;
+        }
+        .box-dieutri {
+            cursor: pointer;
+        }
+        .box-dieutri h5 {
+            color: #416aa9;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+        .conclude {
+            background: #b7c8ff;
+            border: solid 2px #1d18a7;
+            padding: 10px;
+        }
+        .conclude p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main mt-5">
+        <!-- Section 1: Product Overview -->
+        <div class="row mb-5">
+            <div class="col-md-4 product-slider">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img width="300" src="./img/thumbnail_2_cryo-basic.png" alt="Product Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/3964736c423afb64a22b_(1).jpg" alt="Product Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/3964736c423afb64a22b_(1).jpg" alt="Product Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="product-thumbnails text-center mt-3">
+                    <img src="./img/thumbnail_2_cryo-basic.png" alt="Thumbnail 1" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active">
+                    <img src="./img/3964736c423afb64a22b_(1).jpg" alt="Thumbnail 2" data-bs-target="#productCarousel" data-bs-slide-to="1">
+                    <img src="./img/3964736c423afb64a22b_(1).jpg" alt="Thumbnail 3" data-bs-target="#productCarousel" data-bs-slide-to="2">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1>CRYO BASIC (Buồng áp lạnh triệu liệu thể thao)</h1>
+                <p>CRYO BASIC, sản phẩm hàng đầu từ Châu Âu, là thiết bị xông hơi lạnh sử dụng liệu pháp áp lạnh toàn thân với công nghệ nitơ lỏng tiên tiến. Đạt được chứng nhận từ FDA, CE, và ISO, máy đảm bảo chất lượng và hiệu quả điều trị trong các ngành thể thao và thẩm mỹ. Được phân phối chính hãng bởi Thiết bị thẩm mỹ Oceania, CRYO BASIC mang lại một trải nghiệm liệu pháp an toàn và hiệu quả.</p>
+                <button class="btn-buy">MUA HÀNG</button>
+                
+            </div>
+        </div>
+
+        <!-- Section 2: Technology Description -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="section-title fw-bold">Công Nghệ</h2>
+                <p>CRYO BASIC hoạt động bằng cách sử dụng công nghệ nitơ lỏng để đạt nhiệt độ cực thấp trong buồng xông hơi, từ -110 đến -180°C (-256-280°F). Khi tiếp xúc trong thời gian ngắn 1-3 phút, nhiệt độ thấp này làm giảm lưu lượng máu, ức chế phản ứng viêm và giảm sự phân bố các chất gây đau. Phương pháp này giúp tăng cường adrenaline và endorphin, giảm đau và viêm, cải thiện khả năng vận động và tăng tốc độ phục hồi cơ thể. Đây là lý do mà liệu pháp áp lạnh được khuyến khích sử dụng sau các buổi tập luyện cường độ cao để giảm đau cơ và tăng hiệu suất thể thao.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Machine Specifications -->
+        <div class="row mb-5">
+            <h2 class="section-title fw-bold">Thông số máy</h2>
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                      <thead class="table-primary text-center">
+                        <tr>
+                          <th scope="col">Thông Số Kỹ Thuật</th>
+                          <th scope="col">Chi Tiết</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Nhiệt Độ Làm Việc: </strong></td>
+                          <td>Lên đến -180°C</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Kích Thước:</strong></td>
+                          <td>91 cm x 172 cm x 203 cm (R x C x D)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Cân Nặng:</strong></td>
+                          <td>250kg</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Yêu Cầu Về Điện:</strong></td>
+                          <td>230 V, 50Hz/110V, 60Hz</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Màn hình:</strong></td>
+                            <td>
+                                <div>Màn hình cảm ứng màu 7 inch</div>
+                                <div>Màn hình kỹ thuật số 7 inch bên trong cabin</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Đặc Trưng:</strong></td>
+                            <td>
+                                <div>- Hệ thống sấy tự động</div>
+                                <div>- Hệ thống nâng tự động chịu tối đa 150kg</div>
+                                <div>- Đèn nền LED và thiết kế hiện đại</div>
+                                <div>- Nút dừng khẩn cấp và cảm biến an toàn trên cửa</div>
+                                <div>- Vật liệu nội thất chống nước và sang trọng</div>
+                                <div>- Camera Thermovision để kiểm soát nhiệt độ</div>
+                                <div>- Chất liệu nội ngoại thất đa dạng</div>
+                                <div>- Logo tùy chỉnh trên thiết bị</div>
+                            </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>              
+            </div>
+            <div class="col-md-4">
+                <img width="300" src="./img/thumbnail_2_cryo-basic.png" alt="Product Image 1">
+            </div>
+        </div>
+
+        <!-- Section 4: Articles -->
+        <div class="row mb-5">
+            <h2 class="section-title fw-bold">Chỉ định điều trị</h2>
+            
+            <div class="grid4">
+                <div class=" box-dieutri rounded">
+                    <img src="./img/465214739_546973531560232_1861689060813263766_n.jpg" alt="Article Image" class="img-fluid">
+                    <h5 class="des-dieutri">Giảm Viêm Và Đau</h5>
+                    <p class="mt-2 des-dieutri">Lý tưởng cho điều trị thấp khớp và chấn thương thể thao.</p>
+                </div>
+                <div class=" box-dieutri rounded">
+                    <img src="./img/465214739_546973531560232_1861689060813263766_n.jpg" alt="Article Image" class="img-fluid">
+                    <h5 class="des-dieutri">Phục Hồi Thể Chất</h5>
+                    <p class="mt-2 des-dieutri">Tăng tốc độ phục hồi sau các hoạt động thể thao cường độ cao.</p>
+                </div>
+                <div class=" box-dieutri rounded">
+                    <img src="./img/465214739_546973531560232_1861689060813263766_n.jpg" alt="Article Image" class="img-fluid">
+                    <h5 class="des-dieutri">Cải Thiện Hiệu Suất Thể Thao</h5>
+                    <p class="mt-2 des-dieutri">Nâng cao hiệu suất và sức bền cho vận động viên.</p>
+                </div>
+                <div class=" box-dieutri rounded">
+                    <img src="./img/465214739_546973531560232_1861689060813263766_n.jpg" alt="Article Image" class="img-fluid">
+                    <h5 class="des-dieutri">Thẩm Mỹ Và Sức Khỏe</h5>
+                    <p class="mt-2 des-dieutri">Hỗ trợ giảm béo và cải thiện lưu thông máu.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Certificates Slider -->
+        <div class="row mb-5">
+            <h2 class="section-title fw-bold">Chứng chỉ  chứng nhận</h2>
+            <div id="certificateCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="./img/thumbnail_2_cryo-basic.png" alt="Certificate Image 1" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 2" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 3" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 4" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="./img/thumbnail_2_cryo-basic.png" alt="Certificate Image 1" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 2" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 3" class="img-fluid">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./img/20241209-153338 (1).jpg" alt="Certificate Image 4" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section 6: Outstanding Features -->
+        <div class="row mb-5">
+            <h2 class="section-title fw-bold">Ưu điểm nổi bật</h2>
+            <div class="col-md-3 advantage">
+                <p><i class="fa-solid fa-circle-check"></i> Phục Hồi Nhanh Chóng: Tăng hiệu suất cơ thể lên 30% và phục hồi nhanh gấp 8 lần.</p>
+                <p><i class="fa-solid fa-circle-check"></i> Tiết Kiệm Calo: Đốt cháy từ 500 đến 800 calo mỗi lần sử dụng.</p>
+                <p><i class="fa-solid fa-circle-check"></i> Tiện Lợi Và An Toàn: Giao diện dễ sử dụng, trang bị cảm biến an toàn và hệ thống tự động.</p>
+                <p><i class="fa-solid fa-circle-check"></i> Thiết Kế Bền Bỉ: Làm từ vật liệu bền vững chịu nhiệt độ thấp.</p>
+            </div>
+            <div class="col-md-9">
+                <div class="grid4">
+                    <div class=" mb-4">
+                        <p><img class="box-dieutri rounded" width="200" src="./img/3964736c423afb64a22b_(1).jpg" alt=""></p>
+                    </div>
+                    <div class=" mb-4">
+                        <p><img class="box-dieutri rounded" width="200" src="./img/81c29ee2afb416ea4fa5_(2).jpg" alt=""></p>
+
+                    </div>
+                    <div class=" mb-4">
+                        <p><img class="box-dieutri rounded" width="200" src="./img/6e3ec20ff3594a071348_(1).jpg" alt=""></p>
+                    </div>
+                    <div class=" mb-4">
+                        <p><img class="box-dieutri rounded" width="200" src="./img/6e3ec20ff3594a071348_(1).jpg" alt=""></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conclude">
+            <h5>Kết luận</h5>
+            <p>CRYO BASIC không chỉ đơn thuần là thiết bị làm đẹp mà còn là công cụ hỗ trợ sức khỏe và phục hồi thể chất. Với công nghệ áp lạnh hàng đầu và thiết kế tối ưu, CRYO BASIC là lựa chọn hoàn hảo cho những ai muốn nâng cao chất lượng dịch vụ thẩm mỹ và sức khỏe. Hãy liên hệ ngay với Thiết bị thẩm mỹ Oceania để được tư vấn chi tiết và sở hữu sản phẩm tuyệt vời này.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Thumbnail activation for product slider
+        const thumbnails = document.querySelectorAll('.product-thumbnails img');
+        const carousel = document.querySelector('#productCarousel');
+
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumbnail.classList.add('active');
+                const bsCarousel = new bootstrap.Carousel(carousel);
+                bsCarousel.to(index);
+            });
+        });
+    </script>
+</body>
+</html>
